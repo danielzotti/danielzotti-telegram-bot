@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  telegram:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: danielzotti-telegram-bot
+    image: dz/danielzotti-telegram-bot
+    restart: unless-stopped

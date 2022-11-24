@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2021-10-05",
+    "event": "In pub with friends",
+    "sentences": [
+      {
+        "name": "Daniel",
+        "text": "Why do programmers keep pressing the F5 button??"
+      },
+      {
+        "name": "Friends",
+        "text": "No, not again....."
+      },
+      {
+        "name": "Daniel",
+        "text": "Because it’s <i>refreshing</i>."
+      }
+    ]
+  }
+]
