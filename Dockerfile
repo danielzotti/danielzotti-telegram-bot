@@ -9,5 +9,7 @@ RUN npm install
 # copy all files from workspace into workdir /app
 COPY . .
 
+CMD npm run build
+
 # Serve the app
 CMD npm run start
