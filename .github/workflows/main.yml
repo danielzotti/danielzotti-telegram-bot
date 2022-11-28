@@ -17,12 +17,22 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: self-hosted
-# Steps represent a sequence of tasks that will be executed as part of the job
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
+
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Install
-        run: npm run install
+
+      # Use Node v18
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # Run Docker script
       - name: Run
         run: npm run docker:start
         env:
