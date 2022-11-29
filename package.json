@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "start": "npm run build && node dist/src/index.js",
-    "docker:start": "docker compose up telegram",
+    "docker:start": "docker-compose up -d --build telegram",
     "build": "rimraf dist && tsc && copyfiles src/assets/** dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
