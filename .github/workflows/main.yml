@@ -21,8 +21,12 @@ jobs:
       - name: Check-out repo
         uses: actions/checkout@v3
 
+      # Create .env file
+      - name: create env file
+        run: |
+          touch .env
+          echo TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }} >> .env
+
       # Run Docker script
       - name: Run Docker
         run: docker-compose up -d --build telegram
-        env:
-          - TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
