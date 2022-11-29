@@ -1,4 +1,4 @@
-FROM node:16.17.1-alpine as build-stage
+FROM node:18.12.1-alpine as build-stage
 
 WORKDIR app
 
