@@ -25,4 +25,4 @@ jobs:
       - name: Run Docker
         run: docker-compose up -d --build telegram
         env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          - TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
