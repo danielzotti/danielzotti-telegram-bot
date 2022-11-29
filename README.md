@@ -87,3 +87,19 @@ The *group privacy* has to be turned *off*: https://stackoverflow.com/questions/
 
 ## Useful links
 - https://medium.com/@g.c.dassanayake/deploying-a-nodejs-application-using-github-actions-e5f4bde7b21b
+
+## GitHub Actions
+
+### Add GitHub runner
+Add runner on private linux server:
+- Add self-hosted runner to GitHub project and install it: https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners
+- Create docker group: `sudo groupadd docker`
+- Create a dedicated user for the runner: `sudo useradd github-runner`
+- Add it to docker group: `sudo usermod -aG docker github-runner` 
+- Move to github-runner home folder: `cd /home/github-runner`
+
+More info: https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners
+
+### Create workflow
+Create a file in `.github/workflows/main.yml`
+
