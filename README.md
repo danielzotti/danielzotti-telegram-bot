@@ -84,3 +84,6 @@ On Daniel's server through GitHub Actions
 ## Add bot to a group
 In order to make the "send joke triggered by keyword" work, the Daniel Zotti bot needs to have access to the message of a group.
 The *group privacy* has to be turned *off*: https://stackoverflow.com/questions/50204633/allow-bot-to-access-telegram-group-messages
+
+## Useful links
+- https://medium.com/@g.c.dassanayake/deploying-a-nodejs-application-using-github-actions-e5f4bde7b21b
